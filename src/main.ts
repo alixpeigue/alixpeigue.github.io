@@ -1,5 +1,7 @@
 import './style.css';
 import 'htmx.org';
+import '/pages/resume.html';
+import '/pages/presentation.html';
 
 function getRandomInt(min: number, max: number) : number {
   const minCeiled = Math.ceil(min);
