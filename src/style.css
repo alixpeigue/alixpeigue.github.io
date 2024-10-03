@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html[data-theme='1'] {
+    --primary: #007D04;
+    --secondary: #F8D8E9;
+    --background: #F9F9F9;
+  }
+
+  html[data-theme='2'] {
+    --primary: #1900A9;
+    --secondary: #F8D8E9;
+    --background: #F9F9F9;
+  }
+  
+  html[data-theme='3'] {
+    --primary: #1900A9;
+    --secondary: #EAEA00;
+    --background: #F9F9F9;
+  }
+}
