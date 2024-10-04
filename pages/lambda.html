@@ -1,0 +1,18 @@
+<span class="text-3xl">Lambda calculus interpreter in rust</span>
+<div>
+  <input name="program" id="program" type="text" />
+  <button type="submit" id="submit">Exec</button>
+  <span id="result"></span>
+</div>
+
+<script type="module">
+  document.getElementById("submit").addEventListener("click", async () => {
+    const program = document.getElementById("program").value;
+    const {exec} = await import("../src/lambda/lambda_calculus.js");
+    const res = exec(program);
+    const resultNode = document.getElementById("result");
+    if (resultNode) {
+      resultNode.innerText = res;
+    }
+  });
+</script>
