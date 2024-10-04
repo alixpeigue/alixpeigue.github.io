@@ -1,0 +1,15 @@
+{
+  "name": "lambda_calculus",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "lambda_calculus_bg.wasm",
+    "lambda_calculus.js",
+    "lambda_calculus.d.ts"
+  ],
+  "main": "lambda_calculus.js",
+  "types": "lambda_calculus.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
