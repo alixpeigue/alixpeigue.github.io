@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build Taiwind
-        run: npx tailwindcss -i ./src/input.css -o ./src/output.css
+        run: npx tailwindcss -i ./src/style.css -o ./src/output.css
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
