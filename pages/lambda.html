@@ -6,9 +6,10 @@
 </div>
 
 <script type="module">
+  import init, {exec} from "/src/lambda/lambda_calculus.js";
+  await init();
   document.getElementById("submit").addEventListener("click", async () => {
     const program = document.getElementById("program").value;
-    const {exec} = await import("../src/lambda/lambda_calculus.js");
     const res = exec(program);
     const resultNode = document.getElementById("result");
     if (resultNode) {

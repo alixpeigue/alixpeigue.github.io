@@ -8,12 +8,15 @@
   <script src="https://unpkg.com/htmx.org@2.0.2"
     integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
     crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alix Peigue</title>
 </head>
 
 <body>
-  <div id="content" class="fixed top-0 left-0 w-full h-4/6 overflow-y-auto">
+  <div id="content" class="fixed top-0 left-0 w-full h-4/6 overflow-y-auto bg-secondary">
+    <canvas class="glslCanvas h-full w-full bg-primary"></canvas>
   </div>
   <div id="presentation"
     class="fixed bottom-0 left-0 bg-primary h-2/6 w-2/5 text-xl text-secondary p-10 flex items-center">
