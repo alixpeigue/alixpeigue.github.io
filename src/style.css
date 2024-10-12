@@ -20,4 +20,12 @@
     --secondary: #EAEA00;
     --background: #F9F9F9;
   }
+
+  .link {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+  }
+
+  .code {
+    @apply bg-gray-100 rounded py-1 px-2
+  }
 }

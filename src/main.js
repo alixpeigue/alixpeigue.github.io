@@ -25,7 +25,7 @@ console.log(canvas.clientHeight);
 const secondary = getColorFromVar('--secondary');
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch(`shaders/basic_mouse.frag`)
+  fetch(`shaders/${getRandomInt(1, 4)}.frag`)
     .then(res => res.text())
     .then(fragmentText => {
       sandbox.load(fragmentText);

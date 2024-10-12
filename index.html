@@ -11,35 +11,38 @@
   <script type="text/javascript"
     src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="static/favicon.svg" sizes="any" type="image/svg+xml">
   <title>Alix Peigue</title>
 </head>
 
 <body>
-  <div id="content" class="fixed top-0 left-0 w-full h-4/6 overflow-y-auto bg-secondary">
-    <canvas class="glslCanvas h-full w-full bg-primary"></canvas>
-  </div>
-  <div id="presentation"
-    class="fixed bottom-0 left-0 bg-primary h-2/6 w-2/5 text-xl text-secondary p-10 flex items-center">
-    <div class="align-middle">
-      <span class="font-black">Alix Peigue</span>
-      <p>Etudiant ingénieur en informatique, développeur freelance</p>
-      <div class="flex gap-5 mt-10">
-        <a href="https://github.com/alixpeigue">
-          <img src="static/github-mark-white.svg" class="w-8 hover:scale-110 transition"></img>
-        </a>
-        <a href="https://www.linkedin.com/in/alix-peigue/">
-          <img src="static/In-White-128.png" class="w-8 hover:scale-110 transition"></img>
-        </a>
+  <div id="main" class="fixed top-0 left-0 w-full h-4/6 overflow-y-auto bg-secondary">
+    <canvas class="absolute inset-0 h-full w-full glslCanvas bg-primary"></canvas>
+
+    <div id="content" class="relative z-10 p-5 m-[20px] h-[calc(100%-40px)]">
+    </div>
+    <div id="presentation"
+      class="fixed bottom-0 left-0 bg-primary h-2/6 w-2/5 text-xl text-secondary p-10 flex items-center">
+      <div class="align-middle">
+        <a class="font-black" href="/">Alix Peigue</a>
+        <p>Computer science student & freelance developer</p>
+        <div class="flex gap-5 mt-10">
+          <a href="https://github.com/alixpeigue">
+            <img src="static/github-mark-white.svg" class="w-8 hover:scale-110 transition"></img>
+          </a>
+          <a href="https://www.linkedin.com/in/alix-peigue/">
+            <img src="static/In-White-128.png" class="w-8 hover:scale-110 transition"></img>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="summary" class="fixed bottom-0 right-0 bg-secondary h-2/6 w-3/5 text-primary p-10 text-l">
-    <div class="flex flex-col">
-      <a href="pages/presentation.html" hx-get="pages/presentation.html" hx-target="#content">Who am I ?</a>
-      <a href="pages/resume.html" hx-get="pages/resume.html" hx-target="#content">Resume</a>
-      <a href="pages/lambda.html" hx-get="pages/lambda.html" hx-target="#content">Lambda Calculus</a>
+    <div id="summary" class="fixed bottom-0 right-0 bg-secondary h-2/6 w-3/5 text-primary p-10 text-l">
+      <div class="flex flex-col">
+        <a href="pages/presentation.html" hx-get="pages/presentation.html" hx-target="#content">Who am I ?</a>
+        <a href="pages/resume.html" hx-get="pages/resume.html" hx-target="#content">Resume</a>
+        <a href="pages/lambda.html" hx-get="pages/lambda.html" hx-target="#content">Lambda Calculus</a>
+      </div>
     </div>
-  </div>
 </body>
 
 </html>

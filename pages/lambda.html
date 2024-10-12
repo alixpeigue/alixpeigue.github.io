@@ -1,19 +1,58 @@
-<span class="text-3xl">Lambda calculus interpreter in rust</span>
-<div>
-  <input name="program" id="program" type="text" />
-  <button type="submit" id="submit">Exec</button>
-  <span id="result"></span>
-</div>
+<div class="flex flex-col justify-around h-full w-full bg-secondary p-10 text-primary text-l overflow-scroll">
+  <span class="text-5xl font-black">Lambda calculus interpreter in Rust</span>
+  <div class="flex items-baseline gap-10">
+    <div class="">
+      <p>This project is a little <a class="link" href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda
+          calculus</a>-inspired
+        lamguage and its interpreter.</p>
+      <p>It implements basic operations between numbers : addition, substraction, multiplicaiton, division, comparison
+        and
+        between booleans : and, or. </p>
+      <p>You can branch by using the ternary operator syntax : <span class="code">condition ?
+          true_branch
+          :
+          false_branch</span></p>
+      <p>You can define an anymous function (Abstraction) like this : <span class="code">(\x.x+1)</span>
+      <p>You can call a function (Application) like this : <span class="code">(\x.x+1) 2</span>
 
-<script type="module">
-  import init, {exec} from "/src/lambda/lambda_calculus.js";
-  await init();
-  document.getElementById("submit").addEventListener("click", async () => {
-    const program = document.getElementById("program").value;
-    const res = exec(program);
-    const resultNode = document.getElementById("result");
-    if (resultNode) {
-      resultNode.innerText = res;
-    }
-  });
-</script>
+      <p>To define a function with multiple parameters, you can use <a class="link"
+          href="https://en.wikipedia.org/wiki/Currying">currying</a>.</p>
+
+      <p>To assign a name to a value, pass this value as a parameter in an abstraction : <span class="code">(\f.f 1)
+          \x.x+1</span>. Here, the function has the name <span class="code">f</span> in the body of the anonymous
+        function.
+      </p>
+
+      <p>See more on the <a class="link" href="https://github.com/alixpeigue/lambda-calculus-interpreter">Project's
+          github
+          repo</a> or use the WASM version of the interpreter on this page.</a>
+    </div>
+
+    <div class="mt-3 w-3/5">
+      <pre id="result" class="whitespace-pre-wrap overflow-scroll font-mono max-h-64"></pre>
+      <form id="user_input" class="flex">
+        <input name="program" id="program" type="text" placeholder="Your Program" class="p-2 mr-3 rounded w-full" />
+        <input type="submit" hidden>
+        <button type="submit" id="submit" class="bg-primary rounded text-secondary p-2 font-bold">Run</button><br>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import init, {exec} from "/src/lambda/lambda_calculus.js";
+    await init();
+    document.getElementById("user_input").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const input = document.getElementById("program");
+      const program = input.value;
+      const res = exec(program);
+      const resultNode = document.getElementById("result");
+      if (resultNode) {
+        resultNode.innerText += `>>> ${program} = ${res}\n`;
+      }
+      resultNode.scrollTop = resultNode.scrollHeight;
+
+      document.getElementById("user_input").reset();
+    });
+  </script>
+</div>
