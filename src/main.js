@@ -14,7 +14,7 @@ function getColorFromVar(varName) {
 }
 
 // set theme in html
-document.getElementsByTagName("html")[0].dataset.theme=`${getRandomInt(1, 4)}`;
+document.getElementsByTagName("html")[0].dataset.theme=`${getRandomInt(1, 7)}`;
 
 // glsl canvas setup
 const canvas = document.querySelector('.glslCanvas');

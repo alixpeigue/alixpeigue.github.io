@@ -20,6 +20,24 @@
     --secondary: #EAEA00;
     --background: #F9F9F9;
   }
+  
+  html[data-theme='4'] {
+    --primary: #00203F;
+    --secondary: #ADEFD1;
+    --background: #F9F9F9;
+  }
+  
+  html[data-theme='5'] {
+    --primary: #234E70;
+    --secondary: #FBF8BE;
+    --background: #F9F9F9;
+  }
+  
+  html[data-theme='6'] {
+    --primary: #F02F34;
+    --secondary: #E7D3BB;
+    --background: #F9F9F9;
+  }
 
   .link {
     @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600

@@ -1,0 +1,3 @@
+[submodule "alixpeigue_CV"]
+	path = alixpeigue_CV
+	url = git@github.com:alixpeigue/alixpeigue_CV.git
